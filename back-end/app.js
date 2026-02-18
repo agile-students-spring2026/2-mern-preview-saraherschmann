@@ -80,3 +80,19 @@ app.post('/messages/save', async (req, res) => {
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
+
+
+
+app.get("/about", (req, res) => {
+  res.json({
+    name: "Sara Herschmann",
+    paragraphs: [
+      "Hi! I’m Sara Herschmann, a Computer Science student at NYU.",
+      "I’m learning MERN development and building full-stack apps.",
+      "This page is served from an Express route returning JSON."
+    ],
+    imageUrl: "https://via.placeholder.com/200"
+  });
+});
+
+
